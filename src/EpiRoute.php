@@ -115,11 +115,11 @@ class EpiRoute
   }
 
   /**
-   *    * EpiRoute::void
-   *       *  Used for HEAD requests as the route handler
-   *          * @name  void
-   *             * @author  Jaisen Mathai <jaisen@jmathai.com>
-   *                */
+   * EpiRoute::void
+   * Used for HEAD requests as the route handler
+   * @name  void
+   * @author  Jaisen Mathai <jaisen@jmathai.com>
+   */
   public function void() { }
   
   /**
