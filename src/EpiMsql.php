@@ -63,10 +63,13 @@ class EpiMsql
 		        $sql_result = $link->reap_async_query();
 		        $hash = spl_object_hash($link);
 		        if (is_object($sql_result)) {
-		            $sql_result_array = $sql_result->fetch_array(MYSQLI_ASSOC);
+		        	$i = 0;
+		        	while ($ret = $sql_result->fetch_array(MYSQLI_ASSOC)) {
+		        		$retval[$i++] = $ret;
+		        	}
 		            $sql_result->free();
 		            $this->links[$hash]['error'] = null;
-		            $this->links[$hash]['result'] = $sql_result_array;
+		            $this->links[$hash]['result'] = $retval;
 		        } else {
 		        	$this->links[$hash]['error'] = $link->error;
 		        }
