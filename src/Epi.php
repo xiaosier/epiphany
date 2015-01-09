@@ -26,6 +26,7 @@ class Epi
     'session-apc' => array('base', 'EpiSession.php', 'EpiSession_Apc.php'),
     'session-memcached' => array('base', 'EpiSession.php', 'EpiSession_Memcached.php'),
     'template' => array('base', 'EpiTemplate.php'),
+    'msql' => array('base', 'EpiMsql.php'),
   );
   private static $included = array();
 
